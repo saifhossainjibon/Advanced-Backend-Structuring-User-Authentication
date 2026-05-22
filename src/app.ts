@@ -7,11 +7,13 @@ import express, {
 import { userRoute } from "./modules/user/user.route";
 import { profileRouter } from "./modules/profile/profile.route";
 import { authRoute } from "./modules/auth/auth.route";
+import logger from "./middleware/logger";
+
 const app: Application = express();
 app.use(express.json());
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(logger);
 // aikhne Pool & initDb func cilo jaita DB/index.ts e dise & aikhne import kore niya asci 
 
 app.get("/", (req: Request, res: Response) => {

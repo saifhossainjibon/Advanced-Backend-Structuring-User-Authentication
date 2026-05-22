@@ -26,6 +26,7 @@ const logInUserIntoDb = async (payLoad: {
   const jwtpayload = {
     id: user.id,
     name: user.name,
+    role:user.role,
     is_active: user.is_active,
     email: user.email,
   };
