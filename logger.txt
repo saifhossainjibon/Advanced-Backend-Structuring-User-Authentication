@@ -139,3 +139,13 @@ Method: GET | URL: /api/users | Time: 5/22/2026, 5:41:03 PM
 Method: GET | URL: /api/users | Time: 5/22/2026, 5:41:14 PM
 
 Method: POST | URL: /api/auth/login | Time: 5/22/2026, 5:57:16 PM
+
+Method: POST | URL: /api/auth/login | Time: 5/22/2026, 6:03:59 PM
+
+Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:05:33 PM
+
+Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:11:56 PM
+
+Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:24:58 PM
+
+Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:26:12 PM
