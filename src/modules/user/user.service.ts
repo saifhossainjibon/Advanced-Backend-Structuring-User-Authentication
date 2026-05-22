@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 const createUserIntoDb = async (payLoad: IUser) => {
     const {name, email, age, password} =payLoad;
   // Store hash in your password DB
-    const hashPassword = await bcrypt.hash("B4c0/\/", 10);
+    const hashPassword = await bcrypt.hash(password, 10);
   // RETURNING name, email, age, created_at, updated_at
     const result = await pool.query(
       `
