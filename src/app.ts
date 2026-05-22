@@ -9,13 +9,18 @@ import { profileRouter } from "./modules/profile/profile.route";
 import { authRoute } from "./modules/auth/auth.route";
 import logger from "./middleware/logger";
 import CookieParser from "cookie-parser";
-
+import cors from "cors"
+import { globalErrorHandler } from "./middleware/globalErrorhandler";
 const app: Application = express();
 app.use(CookieParser())
 app.use(express.json());
 app.use(express.text());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger);
+const corsOptions = {
+  origin: 'http://localhost:5000'
+}
+app.use(cors(corsOptions))
 // aikhne Pool & initDb func cilo jaita DB/index.ts e dise & aikhne import kore niya asci 
 
 app.get("/", (req: Request, res: Response) => {
@@ -30,5 +35,7 @@ app.use('/api/users', userRoute)
 app.use('/api/profile', profileRouter)
 app.use('/api/auth', authRoute)
 
+// Global Error Handling Middleware
+app.use(globalErrorHandler);
 // aikhne app.listen cilo jaita server.ts e disi 
 export default app

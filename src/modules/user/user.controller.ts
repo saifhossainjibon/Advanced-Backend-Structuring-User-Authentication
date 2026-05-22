@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import { userService } from "./user.service";
+import sendResponse from "../../utility/sendResponse";
 
 const createUser = async (req: Request, res: Response) => { 
     // ai controller er vitore req, res handle korbe baki sob business logic and query ace aigula amra service er
@@ -7,17 +8,29 @@ const createUser = async (req: Request, res: Response) => {
 //   const { name, email, age, password } = req.body;
   try {
     const result =await userService.createUserIntoDb(req.body)
-    res.status(201).json({
-      success: true,
-      massage: "user created successfully",
-      data: result.rows[0],
-    });
+    // res.status(201).json({
+    //   success: true,
+    //   massage: "user created successfully",
+    //   data: result.rows[0],
+    // });
+    sendResponse(res,{
+      statusCode:201,
+      success:true,
+      message:"user created successfully",
+      data:result.rows[0],
+    })
   } catch (error: any) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
+    // res.status(500).json({
+    //   success: false,
+    //   message: error.message,
+    //   error: error,
+    // });
+        sendResponse(res,{
+      statusCode:500,
+      success:false,
+      message:error.message,
       error: error,
-    });
+    })
   }
 }
 const getAllUser=  async (req: Request, res: Response) => {

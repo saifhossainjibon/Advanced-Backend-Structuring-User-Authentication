@@ -149,3 +149,7 @@ Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:11:56 PM
 Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:24:58 PM
 
 Method: POST | URL: /api/auth/refresh-token | Time: 5/22/2026, 6:26:12 PM
+
+Method: POST | URL: /api/users | Time: 5/22/2026, 7:20:44 PM
+
+Method: POST | URL: /api/users | Time: 5/22/2026, 7:20:59 PM
