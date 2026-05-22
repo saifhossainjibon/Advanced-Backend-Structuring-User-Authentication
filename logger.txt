@@ -137,3 +137,5 @@ Method: GET | URL: /api/users | Time: 5/22/2026, 5:40:21 PM
 Method: GET | URL: /api/users | Time: 5/22/2026, 5:41:03 PM
 
 Method: GET | URL: /api/users | Time: 5/22/2026, 5:41:14 PM
+
+Method: POST | URL: /api/auth/login | Time: 5/22/2026, 5:57:16 PM
